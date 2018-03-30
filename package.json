@@ -1,0 +1,30 @@
+{
+  "name": "todos-api",
+  "version": "1.0.0",
+  "description": "Todos API, based on nodejs and express.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ulff/todos-api.git"
+  },
+  "author": "Olaf Galazka <ulff.pl@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ulff/todos-api/issues"
+  },
+  "homepage": "https://github.com/ulff/todos-api#readme",
+  "devDependencies": {
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.6.1"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
