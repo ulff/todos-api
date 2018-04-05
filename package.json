@@ -4,7 +4,7 @@
   "description": "Todos API, based on nodejs and express.",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon -L server.js",
+    "start": "nodemon -L server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,7 +25,9 @@
     "eslint-plugin-react": "^7.6.1"
   },
   "dependencies": {
+    "body-parser": "^1.18.2",
     "express": "^4.16.3",
-    "mongodb": "^3.0.5"
+    "mongodb": "^3.0.5",
+    "mongoose": "^5.0.12"
   }
 }
