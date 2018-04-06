@@ -5,7 +5,12 @@ const { mongoose } = require('./db/mongoose');
 const { Todo } = require('./model/todo');
 const { User } = require('./model/user');
 
-const PORT = 8080;
+let PORT;
+if (process.env.NODE_ENV === 'test') {
+  PORT = 8081;
+} else {
+  PORT = 8080;
+}
 const HOST = '0.0.0.0';
 
 const app = express();
@@ -17,7 +22,7 @@ app.post('/todos', (req, res) => {
   });
 
   todo.save().then((doc) => {
-    res.send(doc);
+    res.status(201).send(doc);
   }, (e) => {
     res.status(400).send(e);
   });
@@ -26,3 +31,5 @@ app.post('/todos', (req, res) => {
 app.listen(PORT, HOST, () => {
   console.log(`Running on http://${HOST}:${PORT}`);
 });
+
+module.exports = { app };
